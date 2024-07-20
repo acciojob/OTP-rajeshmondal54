@@ -11,13 +11,14 @@
         <h1 id="verification_heading">Verify Your Account</h1>
         <p id="verification_subtext">We emailed you the six digit code to acciojob@email.com. Enter the code below to confirm your email address.</p>
         <div class="code-container">
-            <input type="text" id="code-1" class="code" maxlength="1" oninput="moveToNext(this, 'code-2')">
+            <input type="text" id="code-1" class="code" maxlength="1" oninput="moveToNext(this, 'code-2')" autofocus>
             <input type="text" id="code-2" class="code" maxlength="1" oninput="moveToNext(this, 'code-3')" onkeydown="moveToPrev(this, 'code-1', event)">
             <input type="text" id="code-3" class="code" maxlength="1" oninput="moveToNext(this, 'code-4')" onkeydown="moveToPrev(this, 'code-2', event)">
             <input type="text" id="code-4" class="code" maxlength="1" oninput="moveToNext(this, 'code-5')" onkeydown="moveToPrev(this, 'code-3', event)">
             <input type="text" id="code-5" class="code" maxlength="1" oninput="moveToNext(this, 'code-6')" onkeydown="moveToPrev(this, 'code-4', event)">
             <input type="text" id="code-6" class="code" maxlength="1" onkeydown="moveToPrev(this, 'code-5', event)">
         </div>
+        <p>This is design only. We didn't actually send you an email as we don't have your email, right?</p>
     </div>
     <script src="script.js"></script>
 </body>
