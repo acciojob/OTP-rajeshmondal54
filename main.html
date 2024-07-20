@@ -8,6 +8,18 @@
 
 <body>
 	<!-- the entire body must be written by student -->
+	<div class="container">
+        <h1 id="verification_heading">Verify Your Account</h1>
+        <p id="verification_subtext">We emailed you the six digit code to acciojob@email.com. Enter the code below to confirm your email address.</p>
+        <div class="code-container">
+            <input type="text" class="code" maxlength="1" oninput="moveToNext(this, 'code2')">
+            <input type="text" id="code2" class="code" maxlength="1" oninput="moveToNext(this, 'code3')" onkeydown="moveToPrev(this, 'code1', event)">
+            <input type="text" id="code3" class="code" maxlength="1" oninput="moveToNext(this, 'code4')" onkeydown="moveToPrev(this, 'code2', event)">
+            <input type="text" id="code4" class="code" maxlength="1" oninput="moveToNext(this, 'code5')" onkeydown="moveToPrev(this, 'code3', event)">
+            <input type="text" id="code5" class="code" maxlength="1" oninput="moveToNext(this, 'code6')" onkeydown="moveToPrev(this, 'code4', event)">
+            <input type="text" id="code6" class="code" maxlength="1" onkeydown="moveToPrev(this, 'code5', event)">
+        </div>
+    </div>
     <script type="text/javascript" src="./script.js">
 </script>
 
