@@ -1,11 +1,22 @@
-function moveToNext(current, nextFieldID) {
-    if (current.value.length === 1) {
-        document.getElementById(nextFieldID).focus();
-    }
-}
+const inputs = document.querySelectorAll('.code');
 
-function moveToPrev(current, prevFieldID, event) {
-    if (event.key === 'Backspace' && current.value.length === 0) {
-        document.getElementById(prevFieldID).focus();
+inputs.forEach((input, index) => {
+  input.addEventListener('input', (e) => {
+    const value = e.target.value;
+    if (value) {
+      const nextInput = inputs[index + 1];
+      if (nextInput) {
+        nextInput.focus();
+      }
     }
-}
+  });
+
+  input.addEventListener('keydown', (e) => {
+    if (e.key === 'Backspace') {
+      const prevInput = inputs[index - 1];
+      if (!e.target.value && prevInput) {
+        prevInput.focus();
+      }
+    }
+  });
+});
