@@ -13,10 +13,17 @@ inputs.forEach((input, index) => {
 
   input.addEventListener('keydown', (e) => {
     if (e.key === 'Backspace') {
-      const prevInput = inputs[index - 1];
-      if (!e.target.value && prevInput) {
-        prevInput.focus();
+      if (e.target.value === '') {
+        const prevInput = inputs[index - 1];
+        if (prevInput) {
+          prevInput.focus();
+        }
       }
     }
   });
+});
+
+// Set focus to the first input on page load
+window.addEventListener('load', () => {
+  inputs[0].focus();
 });
