@@ -23,7 +23,6 @@ inputs.forEach((input, index) => {
   });
 });
 
-// Set focus to the first input on page load
 window.addEventListener('load', () => {
   inputs[0].focus();
 });
